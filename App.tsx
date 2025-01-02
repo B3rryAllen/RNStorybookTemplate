@@ -4,7 +4,7 @@
  *
  * @format
  */
-
+/*
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -115,4 +115,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default App;*/
+
+import 'react-native-gesture-handler'
+import StorybookUIRoot from './.storybook';
+
+export default StorybookUIRoot;
