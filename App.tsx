@@ -4,6 +4,7 @@
  *
  * @format
  */
+/*
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -116,3 +117,6 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
+
+export {default} from './.storybook';
