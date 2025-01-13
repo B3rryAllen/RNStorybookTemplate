@@ -4,7 +4,6 @@
  *
  * @format
  */
-/*
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -25,6 +24,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import {default as StorybookDefault} from './.storybook';
+import Config from 'react-native-config';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -116,7 +118,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
-*/
+let AppEntryPoint = App;
 
-export {default} from './.storybook';
+if (Config.STORYBOOK_ENABLED) {
+  AppEntryPoint = StorybookDefault;
+}
+
+export default AppEntryPoint;
