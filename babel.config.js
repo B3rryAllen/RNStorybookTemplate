@@ -3,5 +3,7 @@ module.exports = {
     'module:@react-native/babel-preset',
   ],
   plugins: [
-    'react-native-reanimated/plugin'],
+    'babel-plugin-react-native-web',
+    'react-native-reanimated/plugin'
+  ],
 };
