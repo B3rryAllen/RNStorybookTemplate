@@ -118,10 +118,11 @@ const styles = StyleSheet.create({
   },
 });
 
-let AppEntryPoint = App;
+const getAppEntryPoint = () => {
+  if (Config.STORYBOOK_ENABLED === 'true') {
+    return StorybookDefault;
+  }
+  return App;
+};
 
-if (Config.STORYBOOK_ENABLED) {
-  AppEntryPoint = StorybookDefault;
-}
-
-export default AppEntryPoint;
+export default getAppEntryPoint();

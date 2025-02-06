@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "storybook:web": "storybook -p 6006 -c .storybook-web",
-    "storybook:web:build": "storybook build .storybook-web",
+    "storybook:web": "NODE_ENV=storybookWeb storybook dev -p 6006 -c .storybook-web",
+    "storybook:web:build": "NODE_ENV=storybookWeb storybook build -c .storybook-web",
     "storybook:ios": "echo \"STORYBOOK_ENABLED=true\" > .env && react-native run-ios && echo \"STORYBOOK_ENABLED=false\" > .env",
     "storybook:android": "echo \"STORYBOOK_ENABLED=true\" > .env && react-native run-android && echo \"STORYBOOK_ENABLED=false\" > .env",
     "storybook-generate": "sb-rn-get-stories"
@@ -17,7 +17,7 @@
   "dependencies": {
     "react": "18.3.1",
     "react-native": "0.76.5"
-  },  
+  },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
